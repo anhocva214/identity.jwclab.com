@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+.home-page{
+    .center{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+    &::before{
+        // filter: contrast(0.85);
+        background-image: url(../img/background-temp.jpg);
+        background-position: 
+        center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        display: block;
+        width: 100%;
+        background-attachment: fixed;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .menu{
+        span.item{  
+            border: 2px solid #fff;
+            padding: 5px 50px;
+            display: inline-block;
+            margin: 0 15px;
+            a{
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #fff;
+                &:hover, &:active{
+                    color: #fff;
+                }
+                font-family: 'Fira Sans', sans-serif;
+                transition: all .3s;
+            }
+            transition: all .4s;
+            cursor: pointer;
+            &:hover, &:active{
+                background-color: #fff;
+                a{
+                    color: black;
+                }
+            }
+        }
+    }
+    .logo{
+        padding-bottom: 315px;
+        img{
+            filter: drop-shadow(2px 4px 2px #fff);
+        }
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    padding: 25px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    ul.socail-list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        li.item{
+            margin: 15px;
+            transition: all .3s;
+            svg{
+                fill: white;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+        li.item.active{
+            filter: brightness(0.7);
+        }
+    }
+}
+
+.home-page.loading-page, footer.loading-page{
+    filter: blur(5px);
+}
+
+section.loading-page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #4887bd;
+    z-index: 9;
+    transition: all .3s;
+}
+
+@media only screen and (max-width: 576px){
+    
+    .home-page .menu span.item{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .home-page .logo {
+        padding-bottom: 200px;
+    }
+    
+}

@@ -1,0 +1,26 @@
+main.userCreate{
+    width: 100%;
+    form.form-userCreate{
+        width: 50%;
+    }
+}
+
+// ----------- RESPONSIVE -----------
+
+@media only screen and (max-width: 992px){
+    main.userCreate form.form-userCreate{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    h1.m-0.h-100.d-flex.align-items-center.justify-content-center {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    h1.m-0.h-100.d-flex.align-items-center.justify-content-center {
+        font-size: 1.13rem;
+    }
+}

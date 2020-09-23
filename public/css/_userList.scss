@@ -1,0 +1,116 @@
+main.users-list{
+    .top-table{
+        .input-search{
+            width: 100%;
+            border: 0;
+            border-bottom: 2px solid #001c4c;
+            padding: 5px;
+            outline-width: 0;
+        }
+        .icon-search{
+            font-size: 27px;
+            border-bottom: 2px solid;
+            cursor: pointer;
+        }
+    }
+    .row-head{
+        background-color: $color_1;
+        color: #fff;
+        font-weight: 600;
+        .col-i-head{
+            border-left: 1px solid #ffffff80;
+        }
+    }
+    .row-head, .row-body{
+        padding: 5px 0;
+    }
+    .row-body{
+        .col-i-body, .col-1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .btn{
+            padding: 5px 0;
+            width: 50%;
+            border-radius: 0;
+        }
+        .col-email, .col-fullname, .col-source, .col-id{
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+    }
+
+    .pagination{
+        display: flex;
+        justify-content: center;
+        ul.list{
+            list-style: none;
+            display: flex;
+            li.item{
+                padding: 5px;
+                margin: 0 5px;
+            }
+            li.pre, li.next{
+                color: color_1;
+                font-weight: 600;
+                cursor: pointer;
+                border-bottom: 2px solid $color_1;
+                transition: all .3s;
+                &:hover, &:active{
+                    background-color: $color_1;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// -------------- RESPONSIVE ------------------
+
+@media only screen and (max-width: 992px){
+    .col-phoneNumber{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .row-body{
+        .col-active{
+            .btn-size-large{
+                display: none;
+            }
+            .btn-size-small{
+                display: block !important;
+                i{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    .col-email{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    h1.m-0.h-100.d-flex.align-items-center.justify-content-center {
+        font-size: 1.7rem;
+    }
+    .col-source{
+        display: none !important;
+    }
+    .table-users-list{
+        padding: 0 25px;
+        font-size: .75rem;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    // .col-stt{
+        // max-width: 5% !important;
+    // }
+}

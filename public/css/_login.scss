@@ -1,0 +1,49 @@
+.login-page{
+    height: 100vh;
+    &::before{
+        content: "";
+        background-image: url(../img/bg-login.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    form{
+        color: white;
+        width: 30%;
+        border: 1px solid #50e3dd38;
+        padding: 10px;
+        background-color: #69bddf0f;
+        position: relative;
+        img{
+            position: absolute;
+            bottom: 100%;
+            filter: brightness(1.1);
+        }
+    }
+}
+
+// ----------- RESPONSIVE ------------
+
+@media only screen and (max-width: 992px){
+    .login-page form{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .login-page form{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .login-page form{
+        width: 80%;
+    }
+}
+
