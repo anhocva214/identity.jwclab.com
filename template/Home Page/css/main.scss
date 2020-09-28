@@ -101,3 +101,22 @@ main.home-new-page{
     }
 }
 
+// RESPONSIVE
+@media only screen and (max-width: 768px){
+    main.home-new-page .box-body{
+        width: 90%;
+    }
+    main.home-new-page .box-body .box-btn .btn-nav{
+        font-size: .75rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    main.home-new-page .box-body {
+        padding: 25px;
+    }
+    main.home-new-page .box-body .box-btn .btn-nav {
+        padding: 10px 0;
+        margin: 5px;
+    }
+}
