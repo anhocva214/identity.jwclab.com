@@ -114,8 +114,8 @@ const UserList = () => {
                             <div className="col col-lg-2 col-md-2 col-i-body col-manager d-lg-block d-none">{value.manager}</div>
                             <div className="col col-lg-2 col-md-2 col-sm-2 col-i-body col-phone d-none d-md-block">{value.phone}</div>
                             <div className="col-2 col-lg-2 col-md-3 col-sm-2 col-i-body col-active d-flex justify-content-center align-items-center">
-                                <button onClick={()=>detailUser(value.id)} type="button" className="btn d-none btn-size-smalllarge btn-primary m-0 p-0">Detail</button>
-                                <button onClick={()=>detailUser(value.id)} type="button" className="btn d-none btn-size-small btn-primary"><i className="fa fa-info" aria-hidden="true" />
+                                <button onClick={()=>detailUser(value.id)} type="button" className="btn d-none d-md-block btn-size-smalllarge btn-primary m-0 p-0">Detail</button>
+                                <button onClick={()=>detailUser(value.id)} type="button" className="btn d-block d-md-none btn-size-small btn-primary"><i className="fa fa-info" aria-hidden="true" />
                                 </button>
                             </div>
                         </div>
@@ -164,7 +164,7 @@ const UserList = () => {
                                     <div className=" col-3 col-lg-2 col-md-2 col-sm-3 col-i-head col-address text-center">Address</div>
                                     <div className=" col col-lg-2 col-md-2 col-i-head col-manager text-center d-lg-block d-none ">Manager</div>
                                     <div className=" col col-lg-2 col-md-2 col-sm-2 col-i-head col-phone text-center d-none d-md-block">Phone</div>
-                                    <div className=" col-2 col-lg-2 col-md-3 col-sm-2 col-i-body col-active d-flex justify-content-center align-items-center">Active</div>
+                                    <div className=" col-2 col-lg-2 col-md-3 col-sm-2 col-i-body col-active d-flex justify-content-center align-items-center">Action</div>
                                 </div>
                             </div>
                         </div>

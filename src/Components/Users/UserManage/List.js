@@ -239,7 +239,7 @@ const UserList = () => {
                                     <div className=" col col-lg-2 col-md-2 col-sm-3 col-i-head col-email text-center">Email</div>
                                     <div className=" col col-lg-2 col-md-2 col-i-head col-phoneNumber text-center">Phone Number</div>
                                     <div className=" col col-lg-2 col-md-2 col-sm-2 col-i-head col-source text-center">Source</div>
-                                    <div className="col col-i-head col-active text-center">Active</div>
+                                    <div className="col col-i-head col-active text-center">Action</div>
                                 </div>
                             </div>
                         </div>
