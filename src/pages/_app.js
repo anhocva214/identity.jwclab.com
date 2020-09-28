@@ -24,6 +24,9 @@ const MyApp = ({ Component, pageProps }) => {
                 
                 <link rel="stylesheet" href="/css/main.css" />
                 <link rel="stylesheet" href="/css/main_homepage.css" />
+                <link rel="stylesheet" href="/css/new_page/main.css" />
+                <link rel="stylesheet" href="/css/new_page/main_login.css" />
+                <link rel="stylesheet" href="/css/new_page/util.css" />
 
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
                 {/* Bootstrap CSS */}

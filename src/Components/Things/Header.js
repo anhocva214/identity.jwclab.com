@@ -35,7 +35,7 @@ const Header = (props) => {
 
     const btn_logo = ()=>{
         dispatch({ type: "SHOW_DETAIL_PAGE", showDetailPage: false});
-        router.push("/");
+        router.push("/things");
     }
 
     return (
