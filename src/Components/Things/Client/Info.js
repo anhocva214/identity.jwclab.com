@@ -6,8 +6,8 @@ import cookie from 'react-cookies';
 const ClientInfo = () => {
 
     const dispatch = useDispatch();
-    const urlBackend = useSelector(state => state.urlBackend);
-    const userDetail = useSelector(state => state.userDetail);
+    const urlBackend = useSelector(state => state.Api.urlBackend);
+    const userDetail = useSelector(state => state.Things.userDetail);
 
     const [_isEditFullname, set_isEditFullname] = useState(false);
     const [_inputFullname, set_inputFullname] = useState("");

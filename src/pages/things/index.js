@@ -6,12 +6,15 @@ import UserDetail from '../../Components/Things/UserManage/Detail';
 import ClientInfo from '../../Components/Things/Client/Info';
 import { GridLoader } from 'react-spinners'
 import {useState, useEffect} from 'react'
+import ErrorPage from 'next/error'
+import {useRouter} from 'next/router'
 
 
 const IndexPage = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
 
-  const showLoginPage = useSelector(state => state.Things.showLoginPage);
+  const showLoginPage = useSelector(state => state.Things.showLoginPageThings);
   const showDetailPage = useSelector(state => state.Things.showDetailPage);
   const role = useSelector(state => state.Things.role);
 
@@ -23,6 +26,7 @@ const IndexPage = () => {
         set_isLoading(0)
       }, 700);
     }
+    if (showLoginPage == true) router.push('/')
   })
 
 
@@ -31,22 +35,25 @@ const IndexPage = () => {
     return <UserList />
   }
 
+
+
   const displayLoginPage = () => {
-    if (showLoginPage == true) return <Login />
-    else if (role == "client") return (<><Header title="Client Info" /><ClientInfo /></>)
-    return (
-      <>
-        <Header title="Station Management" />
-        {displayIndexPage()}
-      </>
+    if (showLoginPage == false) return (<><Header title="Station Management" /> {displayIndexPage()} </>)
+    // else if (role == "admin") return (<><Header title="Station Management" /> {displayIndexPage()} </>)
+    // else if (role == "client") return (<><Header title="Client Info" /><ClientInfo /></>)
+    // return (<Login />)
+    return  (
+      <section className={"loading-page justify-content-center align-items-center d-flex"} style={{ opacity: _isLoading.toString(), transition: "all .5s", zIndex: (_isLoading - 1).toString() }}>
+        <GridLoader size={50} color={"#fff"} loading={true} />
+      </section>
     )
   }
 
   return (
     <>
-      <section className={"loading-page justify-content-center align-items-center d-flex"} style={{ opacity: _isLoading.toString(), transition: "all .5s", zIndex: (_isLoading - 1).toString() }}>
+      {/* <section className={"loading-page justify-content-center align-items-center d-flex"} style={{ opacity: _isLoading.toString(), transition: "all .5s", zIndex: (_isLoading - 1).toString() }}>
         <GridLoader size={50} color={"#fff"} loading={true} />
-      </section>
+      </section> */}
       {displayLoginPage()}
     </>
   )

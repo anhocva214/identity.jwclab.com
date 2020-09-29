@@ -3,10 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import cookie from 'react-cookies';
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-const Login = () => {
+const Login = ({clickNavigate}) => {
 
     const dispatch = useDispatch();
+    const router = useRouter();
 
     const urlBackend = useSelector(state => state.Api.urlBackend);
 
@@ -24,7 +26,8 @@ const Login = () => {
     };
 
     const login = (event) => {
-        event.preventDefault();
+        event.preventDefault();;
+        clickNavigate('loading')
         if (_id.length == 0 && _password.length == 0) {
             dispatch({ type: "MSG_ALERT", mode: 'warning', msg: "Login failed. Please check your id and password" });
         }
@@ -42,8 +45,10 @@ const Login = () => {
                     // localStorage.setItem('token', data);
                     cookie.save('token', data, { maxAge: 24 * 60 * 60 });
                     success_login(data.accessToken);
+                    clickNavigate('users');
                 })
                 .catch(({ response }) => {
+                    clickNavigate('users');
                     if (response) {
                         var data = response.data;
                         dispatch({ type: "MSG_ALERT", mode: "error", msg: data.message });
@@ -85,6 +90,7 @@ const Login = () => {
     const success_login = (accessToken) => {
         dispatch({ type: "SHOW_LOGIN_PAGE", showLoginPage: false });
         dispatch({ type: "MSG_ALERT", mode: 'success', msg: 'Login Success' });
+        router.push("/users");
         var headers = {
             'x-access-token': accessToken
         }
@@ -94,6 +100,7 @@ const Login = () => {
             headers: headers
         })
             .then(({ data }) => {
+
                 if (data.response.role == "admin") {
                     dispatch({ type: "SET_ROLE", role: "admin" })
                 }
@@ -136,7 +143,7 @@ const Login = () => {
             
             `}</style> */}
 
-            <main className="login-new-page">
+            {/* <main className="login-new-page">
                 <div className="limiter">
                     <div className="container-login100">
                         <div className="wrap-login100">
@@ -144,35 +151,43 @@ const Login = () => {
                                 <Link href="/">
                                     <img className="w-100" src="/img/logo-home.png" alt="logo" />
                                 </Link>
-                            </div>
-                            <form className="login100-form validate-form"  onSubmit={(event)=>login(event)}>
-                                <span className="login100-form-title">
-                                    Member Login
+                            </div> */}
+
+            <form style={{ margin: '0 auto', width: '315px' }} className="login100-form validate-form mt-4" onSubmit={(event) => login(event)}>
+                <span className="login100-form-title">
+                    Users Identity
                                 </span>
-                                <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                                    <input onChange={(event)=>set_id(event.target.value.trim())} className="input100" type="text" name="email" placeholder="ID" />
-                                    <span className="focus-input100" />
-                                    <span className="symbol-input100">
-                                        <i className="fa fa-envelope" aria-hidden="true" />
-                                    </span>
-                                </div>
-                                <div className="wrap-input100 validate-input" data-validate="Password is required">
-                                    <input  onChange={(event)=>set_password(event.target.value.trim())} className="input100" type="password" name="pass" placeholder="Password" />
-                                    <span className="focus-input100" />
-                                    <span className="symbol-input100">
-                                        <i className="fa fa-lock" aria-hidden="true" />
-                                    </span>
-                                </div>
-                                <div className="container-login100-form-btn">
-                                    <button type="submit" className="login100-form-btn">
-                                        Login
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+                <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <input onChange={(event) => set_id(event.target.value.trim())} className="input100" type="text" name="email" placeholder="ID" />
+                    <span className="focus-input100" />
+                    <span className="symbol-input100">
+                        <i className="fa fa-envelope" aria-hidden="true" />
+                    </span>
+                </div>
+                <div className="wrap-input100 validate-input" data-validate="Password is required">
+                    <input onChange={(event) => set_password(event.target.value.trim())} className="input100" type="password" name="pass" placeholder="Password" />
+                    <span className="focus-input100" />
+                    <span className="symbol-input100">
+                        <i className="fa fa-lock" aria-hidden="true" />
+                    </span>
+                </div>
+                <div className="container-login100-form-btn pt-0">
+                    <button type="submit" className="login100-form-btn">
+                        Login
+                    </button>
+                </div>
+                <div className="container-login100-form-btn">
+                    <button onClick={()=>clickNavigate('home')} style={{width: 'auto', padding: '20px 20px 20px 17px'}} type="button" className="login100-form-btn btn-warning">
+                        <i class="fa fa-angle-left" style={{fontSize: '2.5rem', color: '#fff'}}></i>
+                    </button>
+                </div>
+            </form>
+
+
+            {/* </div>
                     </div>
                 </div>
-            </main>
+            </main> */}
 
 
         </>

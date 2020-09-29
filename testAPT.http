@@ -1,0 +1,3 @@
+POST http://identity.jwclab.com:32768/login
+
+{"id":"jwclab1221","password":"123"}

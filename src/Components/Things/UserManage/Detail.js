@@ -53,12 +53,13 @@ const UserDetail = () => {
 
     const getHistoryLogin = ()=>{
         set_historyLoading(true);
-        var key = `HISTORY_${userDetail.id}`
+        var key = `HISTORY_${userDetail.id}`;
+        if (cookie.load('tokenStation'))
         axios({
             method: "post",
             url: urlBackend + "/history",
             headers:{
-                'x-access-token': cookie.load('token').accessToken
+                'x-access-token': cookie.load('tokenStation').accessToken
             },
             data:{
                 id: key

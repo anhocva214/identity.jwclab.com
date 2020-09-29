@@ -62,33 +62,6 @@ const UserList = () => {
         }       
     }
 
-    const remove_user = (id)=>{
-        var tempData = dataUsersList;
-        tempData = dataUsersList.filter(item => item.id != id);
-        dispatch({ type: "SET_DATA_USERS_LIST", dataUsersList: tempData});
-        var data = {
-            id: id
-        };
-        var headers = {
-            'x-access-token': cookie.load('token').accessToken,
-            'content-Type': 'application/json'
-        };
-        axios({
-            method: 'post',
-            url: urlBackend + "/remove",
-            headers: headers,
-            data: data
-        })
-            .then(({data})=>{
-                // console.log(data);
-                dispatch({type: "MSG_ALERT", mode: 'success', msg: data.response});
-            })
-            .catch(error=>{
-                if (error.response.data.response)
-                dispatch({type: "MSG_ALERT", mode: 'success', msg: error.response.data.response});
-            })
-    }
-
     const detailUser = (id)=>{
         var userInfo = dataUsersList.filter(item => item.id == id)[0];
         dispatch({ type: "SET_USER_DETAIL", userDetail: userInfo});

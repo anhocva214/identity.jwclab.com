@@ -24,6 +24,7 @@ const Header = (props) => {
             cookie.remove('token');
             dispatch({type: "SHOW_LOGIN_PAGE", showLoginPage: true});
             dispatch({type: "MSG_ALERT", mode: 'success', msg: data.response});
+            dispatch({type: 'SET_LOGIN_BOX', loginBox: 'users'});
         })
         .catch(({response})=>{
             // var error = response.data;

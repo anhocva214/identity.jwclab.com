@@ -3,13 +3,14 @@ import Alert from 'react-s-alert';
 
 const initialState = {
     connect: "Connect Success!",
-    showLoginPage: true,
+    showLoginPageThings: true,
     dataUsersList: [],
     role: "null",
     userDetail: {},
     showDetailPage: false,
     optionsManager: [],
     selectedPage: 0,
+    loginBox: 'home'
 }
 
 const Things = (state = initialState, action) => {
@@ -17,8 +18,8 @@ const Things = (state = initialState, action) => {
         case "CONNECT":
             console.log("Connect Success!");
             return state
-        case "SHOW_LOGIN_PAGE":
-            return { ...state, showLoginPage: action.showLoginPage }
+        case "SHOW_LOGIN_PAGE_THINGS":
+            return { ...state, showLoginPageThings: action.showLoginPageThings }
         case "SET_DATA_USERS_LIST":
             var tempData = action.dataUsersList;
             var between = tempData.length / 2;
@@ -51,6 +52,9 @@ const Things = (state = initialState, action) => {
             return { ...state, optionsManager: tempManager }
         case "SET_SELECTED_PAGE":
             return { ...state, selectedPage: action.selectedPage }
+        case "SET_LOGIN_BOX":
+            console.log(action.loginBox);
+            return { ...state, loginBox: action.loginBox }
         default:
             return state
     }

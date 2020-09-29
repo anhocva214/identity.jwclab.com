@@ -10,6 +10,7 @@ const initialState = {
     showDetailPage: false,
     optionsSource: [],
     selectedPage: 0,
+    loginBox: 'home'
 }
 
 const Users = (state = initialState, action) => {
@@ -84,6 +85,9 @@ const Users = (state = initialState, action) => {
             return { ...state, optionsSource: tempSource }
         case "SET_SELECTED_PAGE":
             return { ...state, selectedPage: action.selectedPage }
+        case "SET_LOGIN_BOX":
+            console.log(action.loginBox);
+            return { ...state, loginBox: action.loginBox}
         default:
             return state
 

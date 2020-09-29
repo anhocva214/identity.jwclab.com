@@ -12,7 +12,12 @@ const Header = (props) => {
     const urlBackend = useSelector(state => state.Api.urlBackend);
 
     const logout = ()=>{
-        var accessToken = cookie.load('token').accessToken;
+        if (!cookie.load('tokenStation')){
+            dispatch({type: "SHOW_LOGIN_PAGE_THINGS", showLoginPageThings: true});
+        }
+        else{
+            var accessToken = cookie.load('tokenStation').accessToken;
+        }
         var headers = {
             'x-access-token': accessToken
         }
@@ -22,9 +27,10 @@ const Header = (props) => {
             headers: headers
         })
         .then(({data})=>{
-            cookie.remove('token');
-            dispatch({type: "SHOW_LOGIN_PAGE", showLoginPage: true});
+            cookie.remove('tokenStation');
+            dispatch({type: "SHOW_LOGIN_PAGE_THINGS", showLoginPageThings: true});
             dispatch({type: "MSG_ALERT", mode: 'success', msg: data.response});
+            dispatch({type: 'SET_LOGIN_BOX', loginBox: 'things'});
         })
         .catch(({response})=>{
             // var error = response.data;
