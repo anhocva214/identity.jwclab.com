@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>JWCLab</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main_login.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <main class="list-page">
+        <div class="row ml-0 mr-0">
+            <div class="col-null d-none d-lg-block"></div>
+            <div class="col-xl-2 col-lg-2 col-md-12 col-main-left active" id="col-main-left">
+                <div class="content">
+                    <div class="head-section">
+                        <img class="w-100" src="/img/logo-text.png" alt="logo-text">
+                        <span id="icon-bars" class="icon-bars">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                    </div>
+                    <ul class="list-nav mb-0">
+                        <li class="item-nav active">
+                            <span class="icon">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                            </span>
+                            <span class="text">users</span>
+                        </li>
+                        <li class="item-nav">
+                            <span class="icon">
+                                <i class="far fa-life-ring"></i>
+                            </span>
+                            <span class="text">thigns</span>
+                        </li>
+                        <li class="item-nav">
+                            <span class="icon">
+                                <i class="far fa-user-circle"></i>
+                            </span>
+                            <span class="text">account</span>
+                        </li>
+                        <li class="item-nav">
+                            <span class="icon">
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                            <span class="text">about</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl col-lg col-md-12 col-main-right p-0 pb-4">
+                <div class="bg-reps-mobile"></div>
+                <div class="head-section">
+                    <span class="title">Users</span>
+                    <div class="name-account text-center">
+                        <img class="avatar mr-3" src="/img/avatar.jpg" alt="avatar">
+                        <span class="text">
+                            <span class="name"> Việt Trần </span>
+                            <span class="badge badge-primary d-block">admin</span>
+                        </span>
+                        <span class="icon-down">
+                            <i class="fas fa-sort-down"></i>
+                        </span>
+                        <div class="box-info">
+                            <div class="item">Thông tin</div>
+                            <div class="item">Đổi mật khẩu</div>
+                            <div class="item">Đăng xuất</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab list -->
+                <div class="support-tool">
+                    <div class="col-left">
+                        <div class="btn-group mr-3 d-inline-flex d-sm-none">
+                            <span class="icon-search">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input type="text" class="jwc-input-search" placeholder="Saerch for id">
+                        </div>
+                    </div>
+                    <div class="col-right">
+                        <div class="btn-group mr-3 d-none d-sm-inline-flex">
+                            <span class="icon-search">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input type="text" class="jwc-input-search" placeholder="Saerch for id">
+                        </div>
+
+                        <div class="filter-source btn-group bg-white d-flex align-items-center justify-content-center">
+                            <i class="fas fa-filter"></i>
+                            <span class="ml-2 mr-2">Source:</span>
+                            <select class="source-select">
+                                <option value="all" selected>All</option>
+                                <option value="jwclab">JWCLab</option>
+                                <option value="uzip">Uzip</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn btn-add-user ml-3">New User</button>
+                    </div>
+                </div>
+
+                <div class="table-list">
+                    <div class="table-responsive bg-white">
+                        <table class="table table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Fullname</th>
+                                    <th class="d-none d-md-table-cell" scope="col">Phone Number</th>
+                                    <th class="d-none d-md-table-cell" scope="col">Role</th>
+                                    <th scope="col">Source</th>
+                                    <th scope="col" class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>jwclab2121212121212</td>
+                                    <td>Hoang Bro</td>
+                                    <td class="d-none d-md-table-cell">099999999</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <span class="badge badge-primary">admin</span>
+                                    </td>
+                                    <td>JWCLab Vip</td>
+                                    <td class="text-center">
+                                        <span class="icon-edit mr-3"><i class="fas fa-pen"></i></span>
+                                        <span class="icon-remove ml-3"><i class="fas fa-trash"></i></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>jwclab</td>
+                                    <td>Hoang Bro</td>
+                                    <td class="d-none d-md-table-cell">099999999</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <span class="badge badge-client">client</span>
+                                    </td>
+                                    <td>JWCLab Vip</td>
+                                    <td class="text-center">
+                                        <span class="icon-edit mr-3"><i class="fas fa-pen"></i></span>
+                                        <span class="icon-remove ml-3"><i class="fas fa-trash"></i></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>jwclab</td>
+                                    <td>Hoang Bro</td>
+                                    <td class="d-none d-md-table-cell">099999999</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <span class="badge badge-station">station</span>
+                                    </td>
+                                    <td>JWCLab Vip</td>
+                                    <td class="text-center">
+                                        <span class="icon-edit mr-3"><i class="fas fa-pen"></i></span>
+                                        <span class="icon-remove ml-3"><i class="fas fa-trash"></i></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer d-flex justify-content-between align-items-center mt-4">
+                        <span class="d-flex align-items-center">
+                            <label>Showing</label>
+                            <select class="form-control ml-3 pr-2">
+                                <option>10</option>
+                                <option>15</option>
+                                <option>20</option>
+                            </select>
+                        </span>
+                        <span>
+                            <span style="width: 200px; background-color: aquamarine; height: 30px; display: block;">Phân
+                                trang ở đây</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Tab register -->
+                <div class="accounnt-register-box d-none">
+                    <div class="nav-bar">
+                        <div class="col-left">
+                            <img src="/img/icon-2.png" alt="Icon2">
+                            <span>Register New User</span>
+                        </div>
+                        <div class="col-right"></div>
+                    </div>
+                    <div class="register-box">
+                        <form action="#" method="post">
+                            <div class="jwc-row">
+                                <div class="form-group">
+                                    <label>Id (*) :</label>
+                                    <input type="text" class="form-control" placeholder="Enter id for account">
+                                </div>
+                                <div class="form-group">
+                                    <label>Fullname (*) :</label>
+                                    <input type="text" class="form-control" placeholder="Enter fullname">
+                                </div>
+                            </div>
+                            <div class="jwc-row">
+                                <div class="form-group">
+                                    <label>Password (*) :</label>
+                                    <input type="password" class="form-control" placeholder="Enter password">
+                                </div>
+                                <div class="form-group">
+                                    <label>Confirm Password (*) :</label>
+                                    <input type="password" class="form-control" placeholder="Enter confirm password">
+                                </div>
+                            </div>
+                            <div class="jwc-row">
+                                <div class="form-group">
+                                    <label>Email :</label>
+                                    <input type="email" class="form-control" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Role (*) :</label>
+                                    <select class="form-control">
+                                        <option>Client</option>
+                                        <option>Admin</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="jwc-row">
+                                <div class="form-group">
+                                    <label>Position :</label>
+                                    <input type="text" class="form-control" placeholder="Enter Position">
+                                </div>
+                                <div class="form-group">
+                                    <label>Source :</label>
+                                    <input type="text" class="form-control" placeholder="Enter source">
+                                </div>
+                            </div>
+                            <div class="btn-form text-right mt-3">
+                                <button type="button" class="btn btn-primary btn-save">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <ul class="nav nav-pills mb-3 nav-about d-flex" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                            aria-controls="pills-home" aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                            aria-controls="pills-profile" aria-selected="false">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                            aria-controls="pills-contact" aria-selected="false">Contact</a>
+                    </li>
+                </ul>
+                <div class="tab-content about-content d-block" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatem quae soluta. Qui facere temporibus, nulla harum natus eos cupiditate omnis provident ex blanditiis exercitationem tempore. Hic dolorum blanditiis distinctio.
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatem quae soluta. Qui facere temporibus, nulla harum natus eos cupiditate omnis provident ex blanditiis exercitationem tempore. Hic dolorum blanditiis distinctio.
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatem quae soluta. Qui facere temporibus, nulla harum natus eos cupiditate omnis provident ex blanditiis exercitationem tempore. Hic dolorum blanditiis distinctio.
+                    </div>
+                </div>
+
+                <!-- Tab myinfo -->
+                <div class="accounnt-register-box d-none">
+                    <div class="nav-bar">
+                        <!-- <div class="col-left">
+                            <img src="/img/icon-2.png" alt="Icon2">
+                            <span>Register New User</span>
+                        </div>
+                        <div class="col-right"></div> -->
+                    </div>
+                    <div class="register-box">
+                        <form action="#" method="post">
+                            <div class="jwc-row">
+                                <div class="form-group">
+                                    <label>Id (*) :</label>
+                                    <input type="text" class="form-control" placeholder="viettran">
+                                </div>
+                                <div class="form-group">
+                                    <label>Fullname (*) :</label>
+                                    <input type="text" class="form-control" placeholder="Việt Trần">
+                                </div>
+                            </div>
+                            <div class="jwc-row d-none">
+                                <div class="form-group">
+                                    <label>Password (*) :</label>
+                                    <input type="password" class="form-control" placeholder="Enter password">
+                                </div>
+                                <div class="form-group">
+                                    <label>Confirm Password (*) :</label>
+                                    <input type="password" class="form-control" placeholder="Enter confirm password">
+                                </div>
+                            </div>
+                            <div class="jwc-row">
+                                <div class="form-group">
+                                    <label>Email :</label>
+                                    <input type="email" class="form-control" placeholder="viettran@jwclab.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>Role (*) :</label>
+                                    <select class="form-control">
+                                        <option>Client</option>
+                                        <option>Admin</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="jwc-row">
+                                <div class="form-group">
+                                    <label>Position :</label>
+                                    <input type="text" class="form-control" placeholder="Leader">
+                                </div>
+                                <div class="form-group">
+                                    <label>Source :</label>
+                                    <input type="text" class="form-control" placeholder="JWCLab">
+                                </div>
+                            </div>
+                            <div class="btn-form  d-flex justify-content-between mt-3">
+                                <button type="button" class="btn btn-primary btn-save btn-myinfo">Edit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
+        integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

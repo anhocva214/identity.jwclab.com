@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Provider } from 'react-redux'
 import store from '../Store/Store'
 import Alert from 'react-s-alert';
+import { PopupboxContainer } from 'react-popupbox';
 
 // mandatory
 import 'react-s-alert/dist/s-alert-default.css';
@@ -15,20 +16,16 @@ const MyApp = ({ Component, pageProps }) => {
     return (
         <>
             <Alert stack={{ limit: 3 }} />
+            <PopupboxContainer/>
             <Head>
                 <title>JWCLab</title>
                 {/* Required meta tags */}
-                <link rel="icon" href="http://jwclab.com/uploads/0000/1/2020/03/06/favicon.png" type="image/png" sizes="16x16" />
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-                
-                <link rel="stylesheet" href="/css/main.css" />
-                <link rel="stylesheet" href="/css/main_homepage.css" />
-                <link rel="stylesheet" href="/css/new_page/main.css" />
-                <link rel="stylesheet" href="/css/new_page/main_login.css" />
-                <link rel="stylesheet" href="/css/new_page/util.css" />
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossOrigin="anonymous" />
+                <link rel="stylesheet" href="css/main.css" />
+                <link rel="stylesheet" href="css/main_login.css" />
 
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
                 {/* Bootstrap CSS */}
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
 

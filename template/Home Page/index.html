@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main_login.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,23 +19,43 @@
 
 <body>
     <!-- <section class="loading-page d-flex justify-content-center align-items-cetner"></section> -->
-    <main class="home-new-page">
+    <main class="home-page">
         <div class="container">
-            <div class="spinner spinner6" ></div>
-
+            <!-- <div class="spinner spinner6" ></div> -->
             <div class="box-body">
                 <div class="logo">
                     <img class="w-100" src="/img/logo.png" alt="logo">
                 </div>
-                <h1>welcome to jwclab identity</h1>
+                <h1>WELCOME TO JWCLAB IDENTITY SERVICE</h1>
                 <hr>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit labore recusandae consequatur.</h3>
-                <div class="box-btn">
-                    <button type="button" class="btn-nav">users identity</button>
-                    <button type="button" class="btn-nav">things identity</button>
+                <h3>This service will issue one X.509 certificate per user/device for their identification on JWCLab eco system!</h3>
+                <div class="wrap-login100 mt-4">
+                    <form class="login100-form validate-form">
+                        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                            <input class="input100" type="text" name="email" placeholder="ID">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Password is required">
+                            <input class="input100" type="password" name="pass" placeholder="Password">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn">
+                                Login
+                            </button>
+                        </div>
+
+                    </form>
                 </div>
-                <div class="contact">
-                    <h5>contact with jwclab</h5>
+                <div class="contact mt-4">
                     <ul class="socail-list">
                         <li class="item">
                             <a href="#">

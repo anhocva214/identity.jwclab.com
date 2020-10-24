@@ -1,0 +1,11 @@
+# POST http://identity.jwclab.com:32768/login
+# Content-Type: application/json
+
+# {
+#     "id": "admin_jwclab",
+#     "password": "jwclab"
+# }
+
+GET http://identity.jwclab.com:32768/myinfo
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6ImFkbWluX2p3Y2xhYiIsInBhc3N3b3JkIjoiandjbGFiIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTYwMzI4NTY0NSwiZXhwIjoxNjAzMjkyODQ1fQ.ebAMKI54LkmyyF-zAI-41s75NwlFXQxJS4wa_SKpg-M

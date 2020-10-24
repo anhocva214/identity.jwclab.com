@@ -1,6 +1,8 @@
 import Api from '../Reducer/Api'
-import Users from '../Reducer/Users'
-import Things from '../Reducer/Things'
+import Navigation from '../Reducer/Navigation'
+import AlertReducer from '../Reducer/Alert'
+import MyInfo from '../Reducer/MyInfo'
+
 
 
 
@@ -8,8 +10,9 @@ import { createStore, combineReducers  } from 'redux'
 
 const AllReducer = combineReducers({
     Api,
-    Users,
-    Things
+    Navigation,
+    AlertReducer,
+    MyInfo
 })
 const store = createStore(AllReducer);
 

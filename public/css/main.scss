@@ -1,20 +1,15 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-$color_1 : #001c4c;
-
+// LOGIN
 @import 'login';
 
-header{
-    h1{
-        text-transform: uppercase;
-        color: $color_1;
-    }
-}
+// LIST
+@import 'list';
 
-@import 'userList';
-@import 'userCreate';
-@import 'userDetail';
+// REGISTER
+
+// INFO
